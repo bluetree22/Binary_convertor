@@ -1,0 +1,46 @@
+
+
+def sub(x,y):
+    a = x
+    b = y-1
+
+    while a > 0:
+        if a < 2 ** b:
+
+            v.append(0)
+
+        else:
+         v.append(1)
+
+         a = a - 2 ** b
+
+        b = b - 1
+    print("Here is your binary number ",  v)
+
+def sub1(z,v):
+   for b in range(0,z):
+     v.append(0)
+
+
+   print("Here is your binary number ",  v)
+
+
+n = int(input("Please insert a number "))
+
+x = n
+z = 0
+v = []
+
+
+while x >= 2**z:
+    z = z + 1
+    if x < 2**z:
+      # print(z)
+      z = z-1
+      x = x-2**z
+      v.append(1)
+      if x == 0:
+        sub1(z, v)
+      else:
+       sub(x, z)
+      break
